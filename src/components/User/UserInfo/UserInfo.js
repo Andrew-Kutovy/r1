@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import {useLocation, useOutletContext, useParams} from 'react-router-dom';
 
 const UserInfo = () => {
     const { userId } = useParams();
     const [info, setInfo] = useState({});
+
+    const outInfo = useOutletContext()
+    console.log("outInfo: "+outInfo);
+
+    const path = useLocation()
+    console.log("useLocation: "+path);
 
     const getUserById = async (userId) => {
         try {

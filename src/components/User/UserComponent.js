@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import UserCard from "./UserCard";
-import {Outlet} from "react-router-dom";
+import {Outlet, useNavigate} from "react-router-dom";
+import {AppRoutes} from "../../router/AppRoutes";
 
 const UserComponent = () => {
 
@@ -24,9 +25,16 @@ const UserComponent = () => {
         }
     }
 
+    const info = 'some info ' // example of useOutletContext
+
+    // const navigate = useNavigate()
+    // setTimeout(()=>{
+    //      navigate(AppRoutes.RickMorty)
+    // }, 3000)
+
     return (
         <div>
-            <Outlet />
+            <Outlet context={info} />
             { users?.map((user) =>
                 <div style={{border: "1px solid black"}} key={user.id}><UserCard  user={user} /> </div>
             )}
