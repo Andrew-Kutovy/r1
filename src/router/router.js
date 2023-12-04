@@ -5,6 +5,7 @@ import RickMortyPage from "../pages/rickMortyPage";
 import MainLayout from "../layouts/MainLayout";
 import {AppRoutes} from "./AppRoutes";
 import UserInfo from "../components/User/UserInfo/UserInfo";
+import {CarContainer} from "../components/CarContainer/CarContainer";
 
 export const router = createBrowserRouter([
     {
@@ -24,9 +25,14 @@ export const router = createBrowserRouter([
                         element: <UserInfo />
                     }
                 ]
-            },{
+            },
+            {
                 path: AppRoutes.RickMorty,
                 element: <RickMortyPage />
+            },
+            {
+                path: AppRoutes.CARS,
+                element: <CarContainer />
             }
         ]
     }

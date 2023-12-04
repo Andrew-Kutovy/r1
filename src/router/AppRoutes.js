@@ -2,5 +2,6 @@ export const AppRoutes = {
     MAIN: '/',
     USERS: '/users',
     RickMorty: '/rickmorty',
-    INFO: '/users/:userId'
+    INFO: '/users/:userId',
+    CARS: '/cars'
 }

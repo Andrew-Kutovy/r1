@@ -16,5 +16,9 @@ export const links = [
     {
         path: AppRoutes.INFO,
         label: "UsersInfo"
+    },
+    {
+        path: AppRoutes.CARS,
+        label: "Cars"
     }
 ]
